@@ -31,7 +31,8 @@ def photometry_MSX_A(image_data, radpix, wcs):
     
     final_sum =  phot_array - bkg_sum_array   
     
-    phot_Jy_MSX_A = final_sum* 7.133e12 *scale**2/((180/np.pi)**2*3600**2) # MSX_A W/m^2-sr to Jy *7.133e12*scale**2/((180/np.pi)**2*3600**2)
+    scale = np.mean(proj_plane_pixel_scales(wcs))
+    phot_Jy_MSX_A = final_sum * 7.133e12 * (scale*np.pi/180.0)**2 # MSX_A W/m^2-sr to Jy
     
     
     bkg_table ['aperture_sum'].info.format = '%.8g'  # for consistent table output

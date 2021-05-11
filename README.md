@@ -3,6 +3,13 @@ Radial profile fitter for "A modular set of synthetic spectral energy distributi
 
 This is python based module for observational data radial profile's fitting. Now it's support MSX, WISE, IRAS and custom image data of YSOs.
 
+Before use it you need to check if your fits files contains correct header:
+- correct WCS
+- information about wavelength (for custom image it must be in microns)
+- correct information to get pixel Scale
+- Flux in Jy/pixel for custom image_data
+
+
 If you discover bugs, have issues with the code or suggestions, please feel free to open an issue on Github.
 
 ## Acknowledgements

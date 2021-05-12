@@ -10,6 +10,8 @@ Before use it you need to check if your fits files contains correct header:
 - Flux in Jy/pixel for custom image_data
 
 
+
+
 If you discover bugs, have issues with the code or suggestions, please feel free to open an issue on Github.
 
 ## Acknowledgements
